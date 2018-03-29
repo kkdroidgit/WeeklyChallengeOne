@@ -1,4 +1,4 @@
-package com.slack.weeklychallengeone;
+package com.slack.weeklychallengeone.Utils;
 
 public class Model {
     private String name;

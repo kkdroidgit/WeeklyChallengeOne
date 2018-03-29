@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.slack.weeklychallengeone.Utils.Model;
+import com.slack.weeklychallengeone.Utils.MyAdapter;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ativity_main);
+        set ContentView(R.layout.ativity_main);
 
         initViews();
         loadData();
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerViews.setLayoutManager(layoutManager);
     }
 
 
