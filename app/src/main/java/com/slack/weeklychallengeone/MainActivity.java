@@ -51,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Grid View"));
 
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
     }
+
+
+
 
 
 
