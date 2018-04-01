@@ -19,9 +19,4 @@
             android:textSize="18sp"
             tools:text="Name or Title"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
 </LinearLayout>
