@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
-    public RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
 
 
     @Override
@@ -35,11 +35,6 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
     }
 
-
-
-
-
-
     private void loadData(){
 
         mArrayList = new ArrayList<>();
@@ -51,13 +46,9 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Scroll Views"));
         mArrayList.add(new Model("Grid View"));
 
-
-
         mAdapter = new MyAdapter(mArrayList);
         mRecyclerView.setAdapter(mAdapter);
 
     }
-
-
 
 }
