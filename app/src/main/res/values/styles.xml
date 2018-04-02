@@ -6,6 +6,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="actionBarStyle">@style/QuizAppActionBar</item>
     </style>
+
+    <style name="QuizAppActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/QuizAppTextStyle</item>
+    </style>
+
+    <style name="QuizAppTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/textviewColor</item>
+    </style>
+
+
+
 
 </resources>
