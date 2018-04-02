@@ -9,17 +9,20 @@ import com.slack.weeklychallengeone.Utils.Model;
 import com.slack.weeklychallengeone.Utils.MyAdapter;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
+    private RecyclerView mCrimeRecyclerView;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
@@ -28,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initViews(){
-        mRecyclerView = findViewById(R.id.recyler_view);
-        mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        mCrimeRecyclerView = findViewById(R.id.recyler_view);
+        mCrimeRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mCrimeRecyclerView.setLayoutManager(layoutManager);
+
     }
 
 
@@ -39,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-/*    private void loadData(){
+  private void loadData(){
 
         mArrayList = new ArrayList<>();
 
@@ -52,10 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        MyAdapter mAdapter = new MyAdapter(mArrayList);
 
-    }*/
+      mCrimeRecyclerView.setAdapter(mAdapter);
+
+    }
 
 
 
