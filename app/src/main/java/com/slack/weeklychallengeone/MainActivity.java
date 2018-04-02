@@ -1,5 +1,6 @@
 package com.slack.weeklychallengeone;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,13 +14,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
-    private MyAdapter mAdapter;
+    //private MyAdapter mAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
@@ -28,18 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initViews(){
-        mRecyclerView = findViewById(R.id.recyler_view);
+        RecyclerView mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
     }
 
 
-
-
-
-
-/*    private void loadData(){
+    private void loadData(){
 
         mArrayList = new ArrayList<>();
 
@@ -51,11 +48,12 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Grid View"));
 
 
+        MyAdapter mAdapter = new MyAdapter(mArrayList);
+        RecyclerView mRecyclerView = findViewById(R.id.recyler_view);
+        mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
 
-    }*/
+    }
 
 
 
