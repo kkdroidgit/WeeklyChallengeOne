@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
-    private MyAdapter mAdapter;
+    //private MyAdapter mAdapter;
 
 
     @Override
@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Grid View"));
 
 
+        MyAdapter mAdapter = new MyAdapter(mArrayList);
+        RecyclerView mRecyclerView = findViewById(R.id.recyler_view);
+        mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
 
     }
 
