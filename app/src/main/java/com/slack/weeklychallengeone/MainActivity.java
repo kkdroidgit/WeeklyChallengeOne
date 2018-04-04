@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
+    private RecyclerView mRecyclerView;
 
 
     @Override
@@ -25,22 +26,10 @@ public class MainActivity extends AppCompatActivity {
         loadData();
 
     }
-
-
-    private void initViews(){
+    
+     private void loadData(){
+         
         mRecyclerView = findViewById(R.id.recyler_view);
-        mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
-    }
-
-
-
-
-
-
-/*    private void loadData(){
-
         mArrayList = new ArrayList<>();
 
         mArrayList.add(new Model("Constraint Layout"));
@@ -53,10 +42,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
-    }*/
+    }
 
 
+    private void initViews(){
+        mRecyclerView = findViewById(R.id.recyler_view);
+        mRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
+        mRecyclerViews.setLayoutManager(layoutManager);
+    }
 
 }

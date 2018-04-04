@@ -16,3 +16,6 @@ After removing the bugs the application will look like this :
 
 
 <img src = "https://i.imgur.com/DfIu4Aq.png" width=350>
+
+[Vivek Singh] (https://github.com/theAustin316/WeeklyChallengeOne)
+[slack id] (@austin316)
