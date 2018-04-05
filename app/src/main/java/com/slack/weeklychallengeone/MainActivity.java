@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private void initViews(){
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
     }
 
