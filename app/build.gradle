@@ -26,4 +26,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.android.support:recyclerview-v7:27.1.0'
+    implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation'com.romainpiel.shimmer:library:1.4.0@aar'
+    def htextview_version = "0.1.2"
+// as 3.0 use implementation
+    implementation "com.hanks:htextview-base:$htextview_version"
+    implementation "com.hanks:htextview-rainbow:$htextview_version"
+    implementation "com.hanks:htextview-line:$htextview_version"
+
 }
