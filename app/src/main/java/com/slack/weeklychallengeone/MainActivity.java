@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
+    private RecyclerView mRecyclerView;
 
 
     @Override
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-/*    private void loadData(){
+    private void loadData(){
 
         mArrayList = new ArrayList<>();
 
