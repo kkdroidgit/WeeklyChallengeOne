@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <ImageButton
+        <TextView
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:padding="6dp"
@@ -14,9 +14,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textColor="@android:color/primary_text_light"
+            android:textColor="#ffc"
             android:textSize="18sp"
-            tools:text="Name or Title"/>
-
+            tools:text="Name or Title"
+            android:background="@drawable/border_textview"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
 </LinearLayout>
