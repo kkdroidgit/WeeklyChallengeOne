@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        mRecyclerView.setLayoutManager(layoutManager);
     }
 
 
@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
-    }*/
+    }
 
 
 
