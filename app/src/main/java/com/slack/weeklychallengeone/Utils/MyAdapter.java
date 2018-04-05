@@ -18,6 +18,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.hanks.htextview.line.LineTextView;
+import com.hanks.htextview.rainbow.RainbowTextView;
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
 import com.slack.weeklychallengeone.R;
 
 import java.util.ArrayList;
@@ -37,6 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
         this.mArrayList = mArrayList;
         this.mContext = context;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
     @NonNull
@@ -49,6 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
         holder.tv_name.setText(mArrayList.get(position).getName());
         holder.currentItem=mArrayList.get(position);
     }
@@ -61,20 +68,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
 
 
         class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView tv_name;
+        private RainbowTextView tv_name;
 
             public Model currentItem;
         MyViewHolder(final View view) {
             super(view);
 
             tv_name = view.findViewById(R.id.tv_name);
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse("https://www.youtube.com/results?search_query="+currentItem.getName()));
                     mContext.startActivity(intent);
-
 
                 }
             });

@@ -5,13 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
 
-import com.romainpiel.shimmer.Shimmer;
-import com.romainpiel.shimmer.ShimmerTextView;
 import com.slack.weeklychallengeone.Utils.Model;
 import com.slack.weeklychallengeone.Utils.MyAdapter;
-import com.slack.weeklychallengeone.Utils.VerticalViewPager;
 
 import java.util.ArrayList;
 
@@ -27,12 +23,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initViews();
         loadData();
-        ShimmerTextView shimmerTextView = findViewById(R.id.tv_name);
-        Shimmer shimmer = new Shimmer();
-        shimmer.start(shimmerTextView);
+
+
 
     }
 
