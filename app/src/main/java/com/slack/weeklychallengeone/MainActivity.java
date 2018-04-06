@@ -1,62 +1,64 @@
-package com.slack.weeklychallengeone;
+package com.slack.weeklychallengeone.Utils;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.app.Application;
+import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-import com.slack.weeklychallengeone.Utils.Model;
-import com.slack.weeklychallengeone.Utils.MyAdapter;
+import com.slack.weeklychallengeone.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+import static android.view.FocusFinder.getInstance;
+
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private ArrayList<Model> mArrayList;
-    private MyAdapter mAdapter;
 
+
+    public MyAdapter(ArrayList<Model> mArrayList) {
+        this.mArrayList = mArrayList;
+    }
+    private View view;
+
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_layout, parent, false);
+
+        return new MyViewHolder(view);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
-
-        initViews();
-        loadData();
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.tv_name.setText(mArrayList.get(position).getName());
+        if(position %2 == 0) {
+            holder.tv_name.setBackgroundColor(ContextCompat.getColor(view.getContext(), R.color.list_color1));
+        } else {
+            holder.tv_name.setBackgroundColor(ContextCompat.getColor(view.getContext(), R.color.list_color2));
+        }
 
     }
 
-
-    private void initViews(){
-        mRecyclerView = findViewById(R.id.recyler_view);
-        mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+    @Override
+    public int getItemCount() {
+        return mArrayList.size();
     }
 
 
+    class MyViewHolder extends RecyclerView.ViewHolder{
+        private TextView tv_name;
+        MyViewHolder(View view) {
+            super(view);
 
+            tv_name =  view.findViewById(R.id.tv_name);
 
-
-
-/*    private void loadData(){
-
-        mArrayList = new ArrayList<>();
-
-        mArrayList.add(new Model("Constraint Layout"));
-        mArrayList.add(new Model("Linear Layout"));
-        mArrayList.add(new Model("Relative Layout"));
-        mArrayList.add(new Model("Card View"));
-        mArrayList.add(new Model("Scroll Views"));
-        mArrayList.add(new Model("Grid View"));
-
-
-
-        mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
-
-    }*/
-
+        }
+    }
 
 
 }
