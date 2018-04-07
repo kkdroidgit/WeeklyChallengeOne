@@ -2,20 +2,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#81C784"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-        <ImageButton
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:padding="6dp"
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10.5dp"
             android:gravity="center_horizontal"
             android:id="@+id/tv_name"
+            android:drawableLeft="@drawable/ic_layers_black_24dp"
+            android:drawableRight="@drawable/ic_map_black_24dp"
+            android:drawablePadding="-20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@android:color/primary_text_light"
             android:textSize="18sp"
+            android:background="#388E3C"
             tools:text="Name or Title"/>
 
 
