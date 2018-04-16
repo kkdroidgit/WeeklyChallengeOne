@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">WeeklyChallengeOne</string>
+    <string name="app_name">Android Glossary</string>
+    <string name="linearlayout">Linear\nLayout</string>
+    <string name="constraintlayout">Constraint\nLayout</string>
+    <string name="relativelayout">Relative\nLayout</string>
+    <string name="cardview">Card View</string>
+    <string name="scrollview">Scroll View</string>
+    <string name="gridview">Grid View</string>
+    <string name="constraintlayout_desc">A view group which allows you to position and size widgets in a flexible way by specifying constraints.</string>
+    <string name="linearlayout_desc">A layout that organizes its children into a single horizontal or vertical row.</string>
+    <string name="cardview_desc">A FrameLayout with a rounded corner background and shadow.</string>
+    <string name="scrollview_desc">A view group that allows the view hierarchy placed within it to be scrolled.</string>
+    <string name="gridview_desc">A view group that displays items in a two-dimensional, scrollable grid.</string>
+    <string name="relativelayout_desc">A layout that enables you to specify the location of child objects relative to each other or to the parent.</string>
 </resources>
