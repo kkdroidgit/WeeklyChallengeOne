@@ -4,22 +4,27 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import com.slack.weeklychallengeone.Utils.Model;
 import com.slack.weeklychallengeone.Utils.MyAdapter;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Model> mArrayList;
-    private MyAdapter mAdapter;
+    ArrayList<Model> mArrayList;
+    MyAdapter mAdapter;
+    RecyclerView mRecyclerView;
+    TextView tv;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
@@ -27,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void initViews(){
+    void initViews(){
         mRecyclerView = findViewById(R.id.recyler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
     }
 
 
@@ -39,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-/*    private void loadData(){
-
+    void loadData(){
+        TextView tv = (TextView)findViewById(R.id.tv_name);
         mArrayList = new ArrayList<>();
 
         mArrayList.add(new Model("Constraint Layout"));
@@ -51,11 +56,16 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Grid View"));
 
 
-
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
-    }*/
+
+        for(int i=0;i<mArrayList.size();i++)
+        {
+            System.out.println(mArrayList.get(i));
+        }
+
+    }
 
 
 
