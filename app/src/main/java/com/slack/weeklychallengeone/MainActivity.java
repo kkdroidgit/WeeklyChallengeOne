@@ -1,6 +1,7 @@
 package com.slack.weeklychallengeone;
 
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,14 +13,16 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Model> mArrayList;
-    private MyAdapter mAdapter;
+    ArrayList<Model> mArrayList;
+    MyAdapter mAdapter;
+    RecyclerView mRecyclerView;
+    ConstraintLayout constraintLayout;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
@@ -29,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews(){
         mRecyclerView = findViewById(R.id.recyler_view);
+        constraintLayout = findViewById(R.id.constraint_layout);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
+
     }
 
 
@@ -39,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-/*    private void loadData(){
+  private void loadData(){
+
 
         mArrayList = new ArrayList<>();
 
@@ -53,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
 
-    }*/
+    }
 
 
 

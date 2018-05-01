@@ -16,3 +16,10 @@ After removing the bugs the application will look like this :
 
 
 <img src = "https://i.imgur.com/DfIu4Aq.png" width=350>
+
+
+
+# WeeklyChallengeOne Completed
+After removing the bugs and redesigning the layout
+
+<img src = "https://imgur.com/SrWe05k.png" width=350>
