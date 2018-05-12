@@ -14,12 +14,13 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Model> mArrayList;
     private MyAdapter mAdapter;
+    RecyclerView mRecyclerView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        set ContentView(R.layout.ativity_main);
+        setContentView(R.layout.activity_main);
 
         initViews();
         loadData();
@@ -27,19 +28,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void initViews(){
-        mRecyclerView = findViewById(R.id.recyler_view);
+    private void initViews() {
+        mArrayList = new ArrayList<>();
+        mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(thi);
-        mRecyclerViews.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
+        mAdapter = new MyAdapter(mArrayList);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
 
 
-
-
-
-/*    private void loadData(){
+   private void loadData() {
 
         mArrayList = new ArrayList<>();
 
@@ -51,11 +52,9 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add(new Model("Grid View"));
 
 
+       mAdapter.notifyDataSetChanged();
 
-        mAdapter = new MyAdapter(mArrayList);
-        //mRecyclerView.setAdapter(mAdapter);
-
-    }*/
+        }
 
 
 
