@@ -10,5 +10,4 @@ public class Model {
     public String getName() {
         return name;
     }
-
 }
