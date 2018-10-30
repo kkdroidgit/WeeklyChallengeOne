@@ -17,4 +17,4 @@ After removing the bugs the application will look like this :
 
 <img src = "https://i.imgur.com/DfIu4Aq.png" width=350>
 
-This Project is a part of weekly challenges conducted by us channel moderators in Google India Challenge (Phase 1). 
+This Project is a part of weekly challenges conducted by us channel moderators(#showcase, #abnd_help) in Google India Challenge (Phase 1). 
